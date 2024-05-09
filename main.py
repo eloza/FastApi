@@ -59,8 +59,6 @@ async def update_user(user_update: UserUpdateRequest, user_id: UUID):
                 user.first_name = user_update.first_name
             if user_update.last_name is not None:
                 user.last_name = user_update.last_name
-            # if user_update.middle_name is not None:
-            #     user.middle_name = user.update.middle_name
             if user_update.roles is not None:
                 user.roles = user_update.roles
             return
