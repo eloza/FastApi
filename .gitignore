@@ -158,3 +158,36 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+bin/Activate.ps1
+bin/activate
+bin/activate.csh
+bin/activate.fish
+bin/pip
+bin/pip3
+bin/pip3.12
+bin/python
+bin/python3
+bin/python3.12
+install/bin/Activate.ps1
+install/bin/activate
+install/bin/activate.csh
+install/bin/activate.fish
+install/bin/pip
+install/bin/pip3
+install/bin/pip3.12
+install/bin/python
+install/bin/python3
+install/bin/python3.12
+install/pyvenv.cfg
+pip/bin/Activate.ps1
+pip/bin/activate
+pip/bin/activate.csh
+pip/bin/activate.fish
+pip/bin/pip
+pip/bin/pip3
+pip/bin/pip3.12
+pip/bin/python
+pip/bin/python3
+pip/bin/python3.12
+pip/pyvenv.cfg
+pyvenv.cfg
