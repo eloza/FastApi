@@ -45,7 +45,7 @@ async def delete_user(user_id: UUID):
     for user in db:
         if user.id == user_id:
             db.remove(user)
-            return
+            return {"message": "User deleted successfully"}
     raise HTTPException(
         status_code=404, detail=f"user with id {user_id} does not exist"
     )
@@ -61,7 +61,7 @@ async def update_user(user_update: UserUpdateRequest, user_id: UUID):
                 user.last_name = user_update.last_name
             if user_update.roles is not None:
                 user.roles = user_update.roles
-            return
+            return {"message": "User updated successfully"}
     raise HTTPException(
         status_code=404, detail=f"User with id: {user_id} does not exist."
     )
