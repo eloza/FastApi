@@ -37,7 +37,7 @@ async def fetch_users():
 @app.post("/api/v1/users")
 async def register_user(user: User):
     db.append(user)
-    return {"id": user.id}
+    return {"message": "User registered successfully", "id": user.id, "user": user}
 
 
 @app.delete("/api/v1/users/{user_id}")
