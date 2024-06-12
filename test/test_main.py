@@ -15,3 +15,10 @@ async def test_root(client):
     response = await client.get("/")
     assert response.status_code == 200
     assert response.json() == {"hello": "world"}
+
+# Testing User Listing
+@pytest.mark.asyncio
+async def test_fetch_users(client):
+    response = await client.get("/api/v1/users")
+    assert response.status_code == 200
+    assert len(response.json()) == 2  # based on the initial db size
