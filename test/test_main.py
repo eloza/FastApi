@@ -48,3 +48,14 @@ async def test_delete_user(client, setup_user):
 
     response = await client.get("/api/v1/users")
     assert user_id not in [user['id'] for user in response.json()]
+
+# Testing User Update
+@pytest.mark.asyncio
+async def test_update_user(client, setup_user):
+    user_id = setup_user()
+    update_data = {"first_name": "NewName"}
+    response = await client.put(f"/api/v1/users/{user_id}", json=update_data)
+    assert response.status_code == 200
+
+    response = await client.get(f"/api/v1/users/{user_id}")
+    assert response.json()["first_name"] == "NewName"
